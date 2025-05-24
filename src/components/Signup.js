@@ -13,7 +13,7 @@ function Signup() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try{
-            const res = await axios.post("http://localhost:5000/api/auth/signup", data);
+            const res = await axios.post("https://login-backend-a8vb.onrender.com/api/auth/signup", data);
             setMsg(res.data.msg);
         } catch (err){
             setMsg(err.response.data.msg);
